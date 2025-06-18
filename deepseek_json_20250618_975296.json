@@ -1,0 +1,9 @@
+{
+    "risk_per_trade": 2,
+    "active_pairs": ["EURUSD", "BTCUSD", "XAUUSD"],
+    "strategies": {
+        "sr_bounce": true,
+        "trend_reversal": true,
+        "breakout": false
+    }
+}

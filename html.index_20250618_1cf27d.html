@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAZ - Quotex Trading Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>SHAZ TRADING BOT <span id="version">v3.0</span></h1>
+            <div class="status" id="bot-status">OFFLINE</div>
+        </header>
+
+        <div class="container">
+            <div class="sidebar">
+                <div class="market-selector">
+                    <h3>OTC Markets</h3>
+                    <select id="pair-selector">
+                        <option value="EURUSD">EUR/USD</option>
+                        <option value="BTCUSD">BTC/USD</option>
+                        <option value="GOLD">XAU/USD</option>
+                    </select>
+                </div>
+
+                <div class="strategies">
+                    <h3>Active Strategies</h3>
+                    <label><input type="checkbox" checked> S/R Bounce</label>
+                    <label><input type="checkbox" checked> Trend Reversal</label>
+                    <label><input type="checkbox"> Breakout</label>
+                </div>
+
+                <div class="settings">
+                    <h3>Risk Management</h3>
+                    <input type="range" min="1" max="5" value="2" id="risk-slider">
+                    <span id="risk-value">2%</span>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="chart-container">
+                    <canvas id="price-chart"></canvas>
+                </div>
+
+                <div class="signals">
+                    <h2>Live Signals</h2>
+                    <div id="signal-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <button id="start-bot">START BOT</button>
+            <div class="stats">
+                <span>Win Rate: <span id="win-rate">78%</span></span>
+                <span>Today's P/L: <span id="profit">+5.2%</span></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
